@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Fade, Flex, Line, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, gallery } from "@/resources";
+import { guest } from "@/resources/content";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -146,6 +147,23 @@ export const Header = () => {
                   />
                 </>
               )}
+              {routes["/guest"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="key"
+                    href="/guest"
+                    label={guest.label}
+                    selected={pathname.startsWith("/guest")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="key"
+                    href="/guest"
+                    selected={pathname.startsWith("/guest")}
+                  />
+                </>
+              )}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
@@ -163,7 +181,7 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            {/* <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex> */}
           </Flex>
         </Flex>
       </Flex>

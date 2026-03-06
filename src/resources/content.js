@@ -1,12 +1,12 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Jaydee",
+  lastName: "Zhang",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Product Design with AI Manipulation",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -61,10 +61,10 @@ const home = {
     title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
+  // 首页的自我介绍
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      👋 Hi, I'm Jaydee Zhang a product designer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, passionate about turning complex business challenges into solutions that drive growth, spark user inspiration, and bring genuine joy.
     </>
   ),
 };
@@ -88,9 +88,10 @@ const about = {
   intro: {
     display: true,
     title: "Introduction",
+    // About页的自我介绍
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
+        Jaydee is a 1111Jakarta-based design engineer with a passion for transforming complex challenges
         into simple, elegant design solutions. Her work spans digital interfaces, interactive
         experiences, and the convergence of design and technology.
       </>
@@ -265,4 +266,11 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+const guest = {
+  path: "/guest",
+  label: "Guest Portal",
+  title: `Guest Portal – ${person.name}`,
+  description: `Prototype of high-end resort guest portal`,
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, guest };

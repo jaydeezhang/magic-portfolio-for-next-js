@@ -88,25 +88,25 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
 		return <NotFound />;
 	}
 
-  if (isPasswordRequired && !isAuthenticated) {
-    return (
-      <Column paddingY="128" maxWidth={24} gap="24" center>
-        <Heading align="center" wrap="balance">
-          This page is password protected
-        </Heading>
-        <Column fillWidth gap="8" horizontal="center">
-          <PasswordInput
-            id="password"
-            label="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            errorMessage={error}
-          />
-          <Button onClick={handlePasswordSubmit}>Submit</Button>
-        </Column>
-      </Column>
-    );
-  }
+  // if (isPasswordRequired && !isAuthenticated) {
+  //   return (
+  //     <Column paddingY="128" maxWidth={24} gap="24" center>
+  //       <Heading align="center" wrap="balance">
+  //         This page is password protected
+  //       </Heading>
+  //       <Column fillWidth gap="8" horizontal="center">
+  //         <PasswordInput
+  //           id="password"
+  //           label="Password"
+  //           value={password}
+  //           onChange={(e) => setPassword(e.target.value)}
+  //           errorMessage={error}
+  //         />
+  //         <Button onClick={handlePasswordSubmit}>Submit</Button>
+  //       </Column>
+  //     </Column>
+  //   );
+  // }
 
   return <>{children}</>;
 };
